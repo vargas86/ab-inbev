@@ -5,22 +5,26 @@ export default function Actions(props) {
 
         <div class="article-actions">
             <div class="article-meta">
-                <a href="{`{props.urlActions}`}"><img src={ props.imageActions } /></a>
+                
+                <a href="{`{props.urlActions}`}">
+                    <img src={ props.imageActions } />
+                </a>
+
                 <div class="info">
-                    <a href="" class="author">Eric Simons</a>
-                    <span class="date">January 20th</span>
+                    <a href="" class="author">{ props.name }</a>
+                    <span class="date">{ props.date }</span>
                 </div>
 
                 <button class="btn btn-sm btn-outline-secondary">
                     <i class="ion-plus-round"></i>
           &nbsp;
-          Follow Eric Simons <span class="counter">(10)</span>
+          Follow { props.name } <span class="counter"> { props.counterFollow } </span>
                 </button>
         &nbsp;
         <button class="btn btn-sm btn-outline-primary">
                     <i class="ion-heart"></i>
           &nbsp;
-          Favorite Post <span class="counter">(29)</span>
+          Favorite Post <span class="counter">{ props.fav }</span>
                 </button>
             </div>
         </div>
